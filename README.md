@@ -9,7 +9,7 @@ create your env
 > conda env create --file environment.yml
 
 activate your environment.
-> conda activate envname
+> conda activate tf1_python3
  
 
 ## Running the code
