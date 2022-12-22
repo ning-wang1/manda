@@ -15,3 +15,24 @@ Activate your environment.
 ## Running the code
 1. run 'craft_adv_sample.py' for crafting adversarial examples. There are several configurable params for selecting the specific attack.
 2. run 'detect_ae_cv.py' for detecting the crafted AEs. There are also several configurable params.
+
+Please cite
+
+@article{wang2022manda,
+  title={Manda: On adversarial example detection for network intrusion detection system},
+  author={Wang, Ning and Chen, Yimin and Xiao, Yang and Hu, Yang and Lou, Wenjing and Hou, Thomas},
+  journal={IEEE Transactions on Dependable and Secure Computing},
+  year={early access, 2022},
+}
+
+or
+
+@INPROCEEDINGS{9488874,
+  author={Wang, Ning and Chen, Yimin and Hu, Yang and Lou, Wenjing and Hou, Y. Thomas},
+  booktitle={IEEE INFOCOM 2021 - IEEE Conference on Computer Communications}, 
+  title={MANDA: On Adversarial Example Detection for Network Intrusion Detection System}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={1-10},
+  doi={10.1109/INFOCOM42981.2021.9488874}}
