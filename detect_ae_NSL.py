@@ -65,20 +65,20 @@ def subset_data(data):
 
 def load_aes(attack_name):
     if 'cw' in attack_name:
-        advs = np.load('data/cw_nsl_5/Adv_nsl-kdd_cw-nsl_1.npy')
-        true_labels = np.load('data/cw_nsl_5/labels_nsl-kdd_cw-nsl_1.npy')
+        advs = np.load('data/crafted_ae/cw_nsl_5/Adv_nsl-kdd_cw-nsl_1.npy')
+        true_labels = np.load('data/crafted_ae/cw_nsl_5/labels_nsl-kdd_cw-nsl_1.npy')
         for i in range(2,10):
-            x = np.load('data/cw_nsl_5/Adv_nsl-kdd_cw-nsl_{}.npy'.format(i+1))
-            y = np.load('data/cw_nsl_5/labels_nsl-kdd_cw-nsl_{}.npy'.format(i+1))
+            x = np.load('data/crafted_ae/cw_nsl_5/Adv_nsl-kdd_cw-nsl_{}.npy'.format(i+1))
+            y = np.load('data/crafted_ae/cw_nsl_5/labels_nsl-kdd_cw-nsl_{}.npy'.format(i+1))
             print('success ae in 100 attempts', len(x))
             advs = np.concatenate((advs, x))
             true_labels = np.concatenate((true_labels, y))
     elif 'bim' in attack_name:
-        advs = np.load('data/Adv_nsl-kdd_bim-a-nsl.npy')
-        true_labels = np.load('data/labels_nsl-kdd_bim-a-nsl.npy')
+        advs = np.load('data/crafted_ae/Adv_nsl-kdd_bim-a-nsl.npy')
+        true_labels = np.load('data/crafted_ae/labels_nsl-kdd_bim-a-nsl.npy')
     else:
-        advs = np.load('data/Adv_nsl-kdd_fgsm-nsl.npy')
-        true_labels = np.load('data/labels_nsl-kdd_fgsm-nsl.npy')
+        advs = np.load('data/crafted_ae/Adv_nsl-kdd_fgsm-nsl.npy')
+        true_labels = np.load('data/crafted_ae/labels_nsl-kdd_fgsm-nsl.npy')
 
     return advs, true_labels
 

@@ -146,9 +146,9 @@ def craft_one_type(sess, model, args, X, Y, data, dataset, attack, batch_size):
         print("Average L-2 perturbation size of the adv test set: {}".format(l2_diff), file=f)
 
     # save AEs, true labels and the corresponding clean data of Adv
-    np.save('data/crafted_ae/Adv_%s_%s_%s_%s.npy' % (args.dataset, args.attack, args.change_threshold, args.i), X_adv)
-    np.save('data/crafted_ae/clean_%s_%s_%s_%s.npy' % (args.dataset, args.attack, args.change_threshold, args.i), X)
-    np.save('data/crafted_ae/labels_%s_%s_%s_%s.npy' % (args.dataset, args.attack, args.change_threshold, args.i), Y)
+    np.save('data/crafted_ae/Adv_%s_%s.npy' % (args.dataset, args.attack), X_adv)
+    np.save('data/crafted_ae/clean_%s_%s.npy' % (args.dataset, args.attack), X)
+    np.save('data/crafted_ae/labels_%s_%s.npy' % (args.dataset, args.attack), Y)
     return X_adv, X, Y
 
 
@@ -563,6 +563,8 @@ def get_args():
 
 
 if __name__ == "__main__":
+    if not os.path.isdir('data/crafted_ae'):
+        os.makedirs('data/crafted_ae')
     np.random.seed(1)
     args = get_args()
     args.dataset = 'nsl-kdd'
