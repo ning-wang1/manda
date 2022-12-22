@@ -1,5 +1,5 @@
 # manda
-Code for infocom 2021 paper MANDA
+Code for infocom 2021 paper 'MANDA: On Adversarial Example Detection for Network Intrusion Detection System'
 
 ## Prepare the environment 
 1. Implement annoconda following the instruction in https://www.anaconda.com/. Anaconda will help to manage the learning environement.
@@ -18,7 +18,7 @@ Activate your environment.
 
 Please cite
 
-@article{wang2022manda,
+> @article{wang2022manda,
   title={Manda: On adversarial example detection for network intrusion detection system},
   author={Wang, Ning and Chen, Yimin and Xiao, Yang and Hu, Yang and Lou, Wenjing and Hou, Thomas},
   journal={IEEE Transactions on Dependable and Secure Computing},
@@ -27,7 +27,7 @@ Please cite
 
 or
 
-@INPROCEEDINGS{9488874,
+> @INPROCEEDINGS{9488874,
   author={Wang, Ning and Chen, Yimin and Hu, Yang and Lou, Wenjing and Hou, Y. Thomas},
   booktitle={IEEE INFOCOM 2021 - IEEE Conference on Computer Communications}, 
   title={MANDA: On Adversarial Example Detection for Network Intrusion Detection System}, 
