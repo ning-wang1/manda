@@ -216,4 +216,9 @@ if __name__=='__main__':
 
     train_cnn(MNIST(), "models/mnist.h5", (28,28,1), [32, 32, 64, 64, 200, 200, 10], num_epochs=30)
 
+    np.random.seed(1)
+    tf.random.set_seed(0)
+    # train_cnn_model_cicids(CICIDS(), "./models/cicids.h5", params = [120, 60, 30, 50, 13], num_epochs=10)
+    # train_cnn_model_cicids(CICIDS(attack_cat=10), "./models/cicids_binary.h5", params=[120, 60, 30, 50, 2], num_epochs=2)
+
 
