@@ -22,8 +22,8 @@ def plot_roc(dataset, attack, type='roc'):
     th1 = 0.95
 
     # ------------------ our model --------------------------
-    scores_1 = np.load('data/detect_result/1_scores_{}_{}.npy'.format(dataset, attack))
-    scores_2 = np.load('data/detect_result/2_scores_{}_{}.npy'.format(dataset, attack))
+    scores_1 = np.load('detect_result/1_scores_{}_{}.npy'.format(dataset, attack))
+    scores_2 = np.load('detect_result/2_scores_{}_{}.npy'.format(dataset, attack))
 
     ae_flags = np.concatenate([np.ones(int(len(scores_1)/2)), np.zeros(int(len(scores_1)/2))])
     a = np.where(np.isnan(scores_1))
